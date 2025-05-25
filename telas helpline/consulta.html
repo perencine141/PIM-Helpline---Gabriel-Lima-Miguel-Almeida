@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="consulta-container">
+        <h1>Registros Cadastrados</h1>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar por nome...">
+            <button id="searchButton">Pesquisar</button>
+        </div>
+
+        <div class="table-responsive">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Item</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Data de Registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5">Carregando dados...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button id="refreshButton">Atualizar Lista</button>
+            <a href="index.html" class="logout-link">Sair (Voltar ao Login)</a>
+        </div>
+    </div>
+
+    <script src="consulta.js"></script>
+</body>
+</html>

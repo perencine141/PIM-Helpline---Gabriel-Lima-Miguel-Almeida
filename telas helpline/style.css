@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333; 
+    color: #fff; 
+}
+
+.login-container {
+    background-color: #333; 
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #444; 
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    color: #fff;
+    position: relative; 
+    padding-bottom: 10px; 
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60%; 
+    height: 2px;
+    background-color: #fff; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #ccc; /* Cor das labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 12px 10px;
+    margin-bottom: 25px; 
+    border: none;
+    border-radius: 5px;
+    background-color: #444; 
+    color: #fff; 
+    font-size: 1em;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999; 
+}
+
+.forgot-password {
+    color: #ADD8E6; 
+    text-decoration: none;
+    font-size: 0.95em;
+    margin-bottom: 30px;
+    align-self: flex-end; 
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.access-button {
+    background-color: #5D3FD3; 
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%; 
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.access-button:hover {
+    background-color: #4A32A1; 
+}
+
+.signup-text {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+.signup-text a {
+    color: #ADD8E6; 
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a tela de Consulta */
+
+.consulta-container {
+    background-color: #333;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 95%; 
+    max-width: 900px; 
+    border: 1px solid #444;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.consulta-container h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px; 
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1; 
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1em;
+}
+
+.search-bar button {
+    background-color: #5D3FD3; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #4A32A1;
+}
+
+.table-responsive {
+    overflow-x: auto; 
+    margin-bottom: 30px;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 0 auto; 
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+    color: #eee;
+}
+
+#data-table thead {
+    background-color: #4A32A1; 
+    color: white;
+}
+
+#data-table tbody tr:nth-child(even) {
+    background-color: #3a3a3a; 
+}
+
+#data-table tbody tr:hover {
+    background-color: #555; 
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.actions button#refreshButton {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.actions button#refreshButton:hover {
+    background-color: #0056b3;
+}
+
+.logout-link {
+    color: #ADD8E6;
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 10px 0;
+}
+
+.logout-link:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .consulta-container {
+        padding: 20px 15px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 0; 
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar input[type="text"] {
+        max-width: 100%; 
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions button, .actions .logout-link {
+        width: 100%;
+    }
+}
+/* Estilos para a tela de Cadastro */
+
+.cadastro-container {
+    background-color: #333;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 450px; 
+    border: 1px solid #444;
+}
+
+.cadastro-container h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cadastro-container label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.cadastro-container input[type="text"],
+.cadastro-container input[type="email"],
+.cadastro-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin-bottom: 20px; 
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1em;
+}
+
+.cadastro-container input[type="text"]::placeholder,
+.cadastro-container input[type="email"]::placeholder,
+.cadastro-container input[type="password"]::placeholder {
+    color: #999;
+}
+
+.cadastro-button {
+    background-color: #5D3FD3; 
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 10px; 
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-button:hover {
+    background-color: #4A32A1;
+}
+
+.login-text {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+.login-text a {
+    color: #ADD8E6;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 20px 15px;
+        width: 100%;
+        margin: 10px; 
+        border-radius: 0;
+    }
+
+    .cadastro-container h1 {
+        font-size: 1.8em;
+    }
+}
